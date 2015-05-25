@@ -2,7 +2,6 @@ package de.scravy.jazz.grids;
 
 import de.scravy.jazz.Event;
 import de.scravy.jazz.annotation.Experimental;
-import de.scravy.jazz.grids.TileEventHandler;
 
 /**
  * A {@link TileEventHandler} that simply does nothing.
@@ -15,7 +14,7 @@ import de.scravy.jazz.grids.TileEventHandler;
 public class DefaultTileEventHandler<T> implements TileEventHandler<T> {
 
   @Override
-  public void on(final Event ev, final T tile) {
-
+  public T on(final Event ev, final T tile) {
+    return tile;
   }
 }
